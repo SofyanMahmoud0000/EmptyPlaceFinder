@@ -7,6 +7,9 @@
 * Quality
 * Place
 
+## Database 
+![Database diagram](https://github.com/sofyanmahmoud0000/EmptyPlaceFinder/blob/master/Database.png)
+
 ## Build with 
 * [PHP](https://www.php.net/) - Language used
 * [Laravel](https://laravel.com/) - Framework used
