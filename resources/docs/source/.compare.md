@@ -33,7 +33,7 @@ curl -X POST \
     "http://localhost/api/create" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"username":"aut","password":"nobis","password_confirmation":"vitae","name":"ipsam","address_location":"aut","x_location":"dolores","y_location":"unde","free_slots_high":"dicta","free_slots_medium":"ipsum","free_slots_low":"omnis","price_high":"aut","price_medium":"eligendi","price_low":"mollitia"}'
+    -d '{"username":"eligendi","password":"aspernatur","password_confirmation":"et","name":"error","address_location":"distinctio","x_location":"sed","y_location":"ut","free_slots_high":"quisquam","free_slots_medium":"aut","free_slots_low":"pariatur","price_high":"qui","price_medium":"sit","price_low":"labore"}'
 
 ```
 
@@ -48,19 +48,19 @@ let headers = {
 };
 
 let body = {
-    "username": "aut",
-    "password": "nobis",
-    "password_confirmation": "vitae",
-    "name": "ipsam",
-    "address_location": "aut",
-    "x_location": "dolores",
-    "y_location": "unde",
-    "free_slots_high": "dicta",
-    "free_slots_medium": "ipsum",
-    "free_slots_low": "omnis",
-    "price_high": "aut",
-    "price_medium": "eligendi",
-    "price_low": "mollitia"
+    "username": "eligendi",
+    "password": "aspernatur",
+    "password_confirmation": "et",
+    "name": "error",
+    "address_location": "distinctio",
+    "x_location": "sed",
+    "y_location": "ut",
+    "free_slots_high": "quisquam",
+    "free_slots_medium": "aut",
+    "free_slots_low": "pariatur",
+    "price_high": "qui",
+    "price_medium": "sit",
+    "price_low": "labore"
 }
 
 fetch(url, {
@@ -134,7 +134,7 @@ curl -X POST \
     "http://localhost/api/signin" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"username":"ab","password":"quibusdam"}'
+    -d '{"username":"omnis","password":"vitae"}'
 
 ```
 
@@ -149,8 +149,8 @@ let headers = {
 };
 
 let body = {
-    "username": "ab",
-    "password": "quibusdam"
+    "username": "omnis",
+    "password": "vitae"
 }
 
 fetch(url, {
@@ -214,7 +214,7 @@ curl -X POST \
     "http://localhost/api/changepassword" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"oldpassword":"quaerat","password":"rem","password_confirmation":"quia"}'
+    -d '{"oldpassword":"et","password":"quis","password_confirmation":"quos"}'
 
 ```
 
@@ -229,9 +229,9 @@ let headers = {
 };
 
 let body = {
-    "oldpassword": "quaerat",
-    "password": "rem",
-    "password_confirmation": "quia"
+    "oldpassword": "et",
+    "password": "quis",
+    "password_confirmation": "quos"
 }
 
 fetch(url, {
@@ -282,7 +282,7 @@ curl -X DELETE \
     "http://localhost/api/deletephone" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"phone":"omnis"}'
+    -d '{"phone":"id"}'
 
 ```
 
@@ -297,7 +297,7 @@ let headers = {
 };
 
 let body = {
-    "phone": "omnis"
+    "phone": "id"
 }
 
 fetch(url, {
@@ -346,7 +346,7 @@ curl -X GET \
     -G "http://localhost/api/addphone" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"phone":"dicta"}'
+    -d '{"phone":"sunt"}'
 
 ```
 
@@ -361,7 +361,7 @@ let headers = {
 };
 
 let body = {
-    "phone": "dicta"
+    "phone": "sunt"
 }
 
 fetch(url, {
@@ -456,7 +456,7 @@ curl -X GET \
     -G "http://localhost/api/update" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"et","address_location":"in","free_slots_high":"inventore","free_slots_medium":"enim","free_slots_low":"adipisci","price_high":"ratione","price_medium":"architecto","price_low":"et"}'
+    -d '{"name":"quasi","address_location":"ea","free_slots_high":"consequatur","free_slots_medium":"sit","free_slots_low":"voluptas","price_high":"explicabo","price_medium":"tenetur","price_low":"sit"}'
 
 ```
 
@@ -471,14 +471,14 @@ let headers = {
 };
 
 let body = {
-    "name": "et",
-    "address_location": "in",
-    "free_slots_high": "inventore",
-    "free_slots_medium": "enim",
-    "free_slots_low": "adipisci",
-    "price_high": "ratione",
-    "price_medium": "architecto",
-    "price_low": "et"
+    "name": "quasi",
+    "address_location": "ea",
+    "free_slots_high": "consequatur",
+    "free_slots_medium": "sit",
+    "free_slots_low": "voluptas",
+    "price_high": "explicabo",
+    "price_medium": "tenetur",
+    "price_low": "sit"
 }
 
 fetch(url, {
@@ -522,5 +522,210 @@ Parameter | Type | Status | Description
         `price_low` | string |  required  | .
     
 <!-- END_762dbf4bac3ece23ad09bdef164f5808 -->
+
+#general
+
+
+<!-- START_7f7e095ddeda28003db18fb2d10cf7ce -->
+## find_hospitals_by_location
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/find_hospitals_by_location" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"xloc":0.739,"yloc":669368004.053564,"type":"a"}'
+
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/find_hospitals_by_location"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "xloc": 0.739,
+    "yloc": 669368004.053564,
+    "type": "a"
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+    body: body
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (200):
+
+```json
+{
+    "hospitals": [
+        {
+            "id": 10,
+            "username": "willa.feil@example.com",
+            "name": "Simonis-Runolfsson",
+            "address_location": "33425 Zion Underpass Suite 088\nGreenburgh, ID 39725-9264",
+            "x_location": 89,
+            "y_location": 13.1,
+            "free_slots_high": 22,
+            "free_slots_medium": 15,
+            "free_slots_low": 45,
+            "price_high": 5367,
+            "price_medium": 678,
+            "price_low": 327,
+            "created_at": "2020-06-19T13:25:48.000000Z",
+            "updated_at": "2020-06-19T13:25:48.000000Z",
+            "phones": [
+                23432432,
+                101221321
+            ],
+            "distance": 12.984991336154215
+        },
+        {
+            "id": 9,
+            "username": "cleo.ernser@example.net",
+            "name": "Hill, Stamm and Schuster",
+            "address_location": "51897 Lera Road\nNorth Thaliatown, MT 94461",
+            "x_location": 79,
+            "y_location": 20.8,
+            "free_slots_high": 19,
+            "free_slots_medium": 51,
+            "free_slots_low": 46,
+            "price_high": 5832,
+            "price_medium": 1557,
+            "price_low": 650,
+            "created_at": "2020-06-19T13:25:48.000000Z",
+            "updated_at": "2020-06-19T13:25:48.000000Z",
+            "phones": [
+                555555,
+                333
+            ],
+            "distance": 21.015232570685484
+        }
+    ]
+}
+```
+> Example response (404):
+
+```json
+{
+    "error": ""
+}
+```
+
+### HTTP Request
+`GET find_hospitals_by_location`
+
+#### Body Parameters
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    `xloc` | float |  required  | .
+        `yloc` | float |  required  | .
+        `type` | string |  required  | .
+    
+<!-- END_7f7e095ddeda28003db18fb2d10cf7ce -->
+
+<!-- START_15b650ba181d6179430696670ca5c26b -->
+## get_all_hospitals
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/hospitals" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/hospitals"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (200):
+
+```json
+{
+    "hospitals": [
+        {
+            "id": 10,
+            "username": "willa.feil@example.com",
+            "name": "Simonis-Runolfsson",
+            "address_location": "33425 Zion Underpass Suite 088\nGreenburgh, ID 39725-9264",
+            "x_location": 89,
+            "y_location": 13.1,
+            "free_slots_high": 22,
+            "free_slots_medium": 15,
+            "free_slots_low": 45,
+            "price_high": 5367,
+            "price_medium": 678,
+            "price_low": 327,
+            "created_at": "2020-06-19T13:25:48.000000Z",
+            "updated_at": "2020-06-19T13:25:48.000000Z",
+            "phones": [
+                123,
+                444
+            ]
+        },
+        {
+            "id": 9,
+            "username": "cleo.ernser@example.net",
+            "name": "Hill, Stamm and Schuster",
+            "address_location": "51897 Lera Road\nNorth Thaliatown, MT 94461",
+            "x_location": 79,
+            "y_location": 20.8,
+            "free_slots_high": 19,
+            "free_slots_medium": 51,
+            "free_slots_low": 46,
+            "price_high": 5832,
+            "price_medium": 1557,
+            "price_low": 650,
+            "created_at": "2020-06-19T13:25:48.000000Z",
+            "updated_at": "2020-06-19T13:25:48.000000Z",
+            "phones": [
+                555
+            ]
+        }
+    ]
+}
+```
+> Example response (404):
+
+```json
+{
+    "error": ""
+}
+```
+
+### HTTP Request
+`GET hospitals`
+
+
+<!-- END_15b650ba181d6179430696670ca5c26b -->
 
 

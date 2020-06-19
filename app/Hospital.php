@@ -11,6 +11,9 @@ class Hospital extends Authenticatable implements JWTSubject
     // Variables
     protected $table = "hospital";
 
+    protected $hidden = [
+        'password',
+    ];
     protected $fillable = [
         'name', 
         'username', 
@@ -38,7 +41,10 @@ class Hospital extends Authenticatable implements JWTSubject
     {
         return [];
     }
-
+    public function phones()
+    {
+        return $this->hasMany(Phone::class, 'hospital_id');
+    }
 
     public function setPasswordAttribute($pass)
     {

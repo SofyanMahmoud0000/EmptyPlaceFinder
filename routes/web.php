@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get("/find_hospitals_by_location","PatientController@find_hospitals_by_location");
+Route::get("/hospitals","PatientController@get_all_hospitals");
