@@ -17,3 +17,18 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::group(["middleware" => "Non_authentication"], function(){
+    Route::post("/create","HospitalC@Create");
+    Route::post("/signin","HospitalC@SignIn");
+});
+
+Route::group(["middleware" =>  "Authentication"], function (){
+    Route::post("/changepassword","HospitalC@ChangePassword");
+    Route::delete("/deletephone","HospitalC@DeletePhone");
+    Route::get("/addphone","HospitalC@AddPhone");
+    Route::delete("/logout","HospitalC@LogOut");
+    Route::get("/update","HospitalC@Update");
+    Route::get("/getdata","HospitalC@GetData");
+
+});

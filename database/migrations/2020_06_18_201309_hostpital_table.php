@@ -22,11 +22,11 @@ class HostpitalTable extends Migration
             $table->float("x_location");
             $table->float("y_location");
 
-            $table->integer("free_slots_hight");
+            $table->integer("free_slots_high");
             $table->integer("free_slots_medium");
             $table->integer("free_slots_low");
 
-            $table->integer("price_hight");
+            $table->integer("price_high");
             $table->integer("price_medium");
             $table->integer("price_low");
 
